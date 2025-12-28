@@ -1,22 +1,3 @@
+# Automobile Data Cleaning Project
 
-## Key Cleaning Steps (From Notebook)
-
-1. **Load & Inspect** import pandas as pd df = 
-pd.read_csv('Automobile_data.csv') df.shape # (61, 10) df.info() # 3 
-missing prices 2. **Handle Missing Prices** df['price'] = 
-pd.to_numeric(df['price'], errors='coerce') price_mean = 
-df['price'].mean() # 15387.0 df['price'] = 
-df['price'].fillna(price_mean)
-
-3. **Data Quality Checks** - No duplicates: `df.duplicated().sum()` → 0 
-- Price range: $5,151 - $45,400 - Stats: mean wheel-base 98.48", avg 
-horsepower 107.85
-
-## 📁 Files Included
-- `Automobile_data.csv` - Raw messy data - `data_cleaning.ipynb` - Full 
-Jupyter walkthrough - `automobile_cleaned.csv` - Final production-ready 
-dataset
-## 💼 Skills Demonstrated
-Pandas - Data Cleaning - Missing Value Imputation - Data Inspection - 
-Jupyter Notebooks - Descriptive Stats
-
+Transformed messy automobile dataset (61 rows × 10 columns) into production-ready analytics table using Pandas. Loaded raw `Automobile_data.csv` revealing 3 missing prices, no duplicates, and key stats (wheel-base avg 98.48", horsepower 107.85, price range $5,151-$45,400). Fixed prices with `pd.to_numeric(errors='coerce')` then mean imputation ($15,387), producing clean `automobile_cleaned.csv`. Full Jupyter walkthrough in `data_cleaning.ipynb` demonstrates Pandas data inspection, cleaning, imputation, and descriptive stats - perfect entry-level data analyst portfolio ready for SQL/Power BI/ML workflows.
